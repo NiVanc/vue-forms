@@ -64,7 +64,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-          <app-switch></app-switch>
+          <app-switch v-model="dataSwitch"></app-switch>
         </div>
       </div>
       <hr />
@@ -94,7 +94,7 @@
             </ul>
             <p>Gender: {{ userData.gender }}</p>
             <p>Priority: {{ selectedPriority }}</p>
-            <p>Switched:</p>
+            <p>Switch: {{ dataSwitch }}</p>
           </div>
         </div>
       </div>
@@ -117,7 +117,8 @@ export default {
       message: "",
       sendMail: [],
       selectedPriority: "",
-      priorities: ["Low", "Medium", "High"]
+      priorities: ["Low", "Medium", "High"],
+      dataSwitch: true
     };
   },
   components: {
